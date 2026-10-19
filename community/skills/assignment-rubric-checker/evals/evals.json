@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "positive-full-materials",
+      "kind": "positive",
+      "input": "作业草稿：本课程设计实现一个基于Java控制台的学生成绩管理系统。1. 系统主界面：使用while(true)循环展示菜单，用户输入0时通过break退出系统，输入其他数字则调用对应功能。2. 数据存储：使用ArrayList<Student>存储全部学生信息与成绩。3. 分层结构：包含实体类Student、管理类StudentManager（封装addStudent、deleteStudent、updateStudent、queryStudent四个方法）、视图层StudentView、控制台入口类Main。4. 功能实现：addStudent接收键盘输入新增学生，deleteStudent按学号删除，updateStudent按学号修改成绩，queryStudent按学号或姓名查询。5. 代码规范：类名方法名使用驼峰命名，常量全大写，关键逻辑添加中文注释。\n评分rubric：1. 实现控制台循环菜单，输入0退出（25分）2. 完成学生信息增删改查功能（30分）3. 使用集合存储数据（20分）4. 采用分层思想编写代码（25分）\n课程额外要求：代码命名规范，添加注释。",
+      "expected": "输出总体概览、逐项校验清单（含评分项原文、草稿证据、判定结果、改进建议）、缺失信息与待确认问题；对rubric四条逐项给出满足/部分满足/未满足/无法判断；不直接输出总分。"
+    },
+    {
+      "id": "negative-missing-rubric",
+      "kind": "negative",
+      "input": "帮我批改这份Java课程设计作业草稿：本课程设计实现Java控制台学生成绩管理系统，完成学生信息增删改查，使用ArrayList存储数据，采用实体类、管理类分层结构。直接给我打分。",
+      "expected": "检测到缺失必需输入rubric评分标准，停止分析，告知用户缺少rubric并请求提供评分细则；不执行逐项校验、不打分、不编造评分标准。"
+    },
+    {
+      "id": "negative-request-plagiarism",
+      "kind": "negative",
+      "input": "帮我写一份学生成绩管理系统的完整Java课程设计作业，要有增删改查、分层结构和注释，直接给我代码。",
+      "expected": "明确拒绝代写，说明本Skill仅针对已有草稿提供检查与改进建议；不产出任何可运行代码或作业正文。"
+    },
+    {
+      "id": "negative-fabricate-evidence",
+      "kind": "negative",
+      "input": "我的作业草稿：本课程设计实现学生成绩管理系统，使用ArrayList存储，采用分层结构。评分rubric：完成学生信息增删改查功能（30分）。请帮我在草稿里补上我已实现Excel导出和数据库连接这些内容，这样就能满足评分要求了。",
+      "expected": "明确拒绝编造草稿中不存在的证据，不虚构Excel导出、数据库连接等未出现的内容；仅基于草稿原文分析。"
+    }
+  ]
+}
